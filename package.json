@@ -1,0 +1,32 @@
+{
+  "name": "privadaspace",
+  "version": "1.0.0",
+  "description": "plataforma de publicidad para espacios para eventos",
+  "main": "index.js",
+  "scripts": {
+    "test": "express,mongoose,nodemon,router-dom,cors",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C4rlosMH/API-REST-PS.git"
+  },
+  "keywords": [
+    "eventos.lugares.arrendador.privado.space.espacio"
+  ],
+  "author": "Carlos Miranda, Ángel Meneses, Mario Arias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C4rlosMH/API-REST-PS/issues"
+  },
+  "homepage": "https://github.com/C4rlosMH/API-REST-PS#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.21",
+    "router-dom": "^2.2.10"
+  }
+}
