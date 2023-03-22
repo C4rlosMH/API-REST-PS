@@ -22,6 +22,25 @@ function getArrendadores(req,res){
     })
 }
 
+
+
+function updateArrendadores(req,res){
+    const {id}=req.params;
+    const datosArrendador=req.body;
+ 
+    Arrendadores.findByIdAndUpdate({_id:id},datosArrendador, (error)=>{
+     if(error){
+         res.status(400).send({msg: "Datos no actualizados"})
+     }else{
+         res.status(200).send({msg: "Los datos fueron actualizados correctamente"})
+     }
+    })
+ }
+ 
+ async function getArrendador(req,res){
+     console.log("Obtener los arrendadores");
+ }
+
  function deleteArrendador(req,res){
     const {id}=req.params;
 
@@ -34,30 +53,10 @@ function getArrendadores(req,res){
     })
 }
 
-function updateArrendadores(req,res){
-   const {id}=req.params;
-   const datosArrendador=req.body;
-
-   Arrendadores.findByIdAndUpdate({_id:id},datosArrendador, (error)=>{
-    if(error){
-        res.status(400).send({msg: "Datos no actualizados"})
-    }else{
-        res.status(200).send({msg: "Los datos fueron actualizados correctamente"})
-    }
-   })
-}
-
-async function getArrendador(req,res){
-    console.log("Obtener los arrendadores");
-}
-
-
-
 module.exports={
-    createArrendadores,
-    updateArrendadores,
-    
-    deleteArrendador,
+    createArrendadores,    
     getArrendador,
-    getArrendadores
+    getArrendadores,
+    updateArrendadores,
+    deleteArrendador
 }

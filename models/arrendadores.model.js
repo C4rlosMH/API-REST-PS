@@ -2,15 +2,14 @@ const mongoose=require("mongoose");
 
 
 const Arrendadores=mongoose.Schema({
-    matricula:{
+    id_arrendador:{
         type:String,
         unique:true
     },
     nombre: String,
     apellidos: String,
-    fechana: Date,
-    genero: String,
     telefono: Number,
+    email: String,
     created_at:Date
 })
 
